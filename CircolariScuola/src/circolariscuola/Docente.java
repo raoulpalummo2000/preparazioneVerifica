@@ -10,7 +10,7 @@ package circolariscuola;
  * @author palummo_raoul
  */
 public class Docente {
-    private int ID;
+   private String ID;
     private String nome;
     private String giorno;
     private String ora;
@@ -19,18 +19,18 @@ public class Docente {
         
     }
 
-    public Docente(int ID, String nome, String giorno, String ora) {
+    public Docente(String ID, String nome, String giorno, String ora) {
         this.ID = ID;
         this.nome = nome;
         this.giorno = giorno;
         this.ora = ora;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
@@ -56,6 +56,12 @@ public class Docente {
 
     public void setOra(String ora) {
         this.ora = ora;
+    }
+    
+    public String toString()
+    {
+        String s = ID+";"+nome+";"+giorno+";"+ora;
+        return s;
     }
     
     
